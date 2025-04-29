@@ -3,10 +3,9 @@ import argparse
 import asyncio
 import asyncpg
 import time
-import re
 import pandas as pd
 from datetime import datetime
-from typing import List, Dict, Any, Set, Tuple
+from typing import Dict, Any, Set, Tuple
 
 DEFAULT_BATCH_SIZE = 1000
 DEFAULT_POOL_SIZE = 20
@@ -312,7 +311,7 @@ def parse_args() -> argparse.Namespace:
 
 async def main() -> None:
     args = parse_args()
-    print(f"ETL Loader started with configuration:")
+    print("ETL Loader started with configuration:")
     print(f"  - Sheet URL: {args.sheet_url}")
     print(f"  - Batch size: {args.batch_size}")
     print(f"  - Pool size: {args.pool_size}")

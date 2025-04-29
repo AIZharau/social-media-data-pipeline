@@ -1,7 +1,5 @@
 import os
-import json
 import logging
-from kafka import KafkaConsumer
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, TimestampType
